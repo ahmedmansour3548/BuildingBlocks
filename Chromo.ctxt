@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Chromo
+comment1.params=
+comment1.target=Chromo()
+comment1.text=\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CONSTRUCTORS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\r\n
+comment2.params=geneID
+comment2.target=java.lang.String\ getGeneAlpha(int)
+comment2.text=\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MEMBER\ METHODS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\r\n
+comment3.params=geneID
+comment3.target=int\ getIntGeneValue(int)
+comment4.params=geneID
+comment4.target=int\ getPosIntGeneValue(int)
+comment5.params=
+comment5.target=void\ doMutation()
+comment6.params=
+comment6.target=int\ selectParent()
+comment6.text=\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ STATIC\ METHODS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\r\n
+comment7.params=pnum1\ pnum2\ parent1\ parent2\ child1\ child2
+comment7.target=void\ mateParents(int,\ int,\ Chromo,\ Chromo,\ Chromo,\ Chromo)
+comment8.params=pnum\ parent\ child
+comment8.target=void\ mateParents(int,\ Chromo,\ Chromo)
+comment9.params=targetA\ sourceB
+comment9.target=void\ copyB2A(Chromo,\ Chromo)
+numComments=10

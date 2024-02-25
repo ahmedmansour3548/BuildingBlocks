@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Parameters
+comment1.params=parmfilename
+comment1.target=Parameters(java.lang.String)
+comment1.text=\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CONSTRUCTORS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\r\n
+comment2.params=output
+comment2.target=void\ outputParameters(java.io.FileWriter)
+comment2.text=\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ STATIC\ METHODS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\r\n
+numComments=3

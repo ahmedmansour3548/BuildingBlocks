@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=OneMax
+comment1.params=
+comment1.target=OneMax()
+comment1.text=\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CONSTRUCTORS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\r\n
+comment2.params=X
+comment2.target=void\ doRawFitness(Chromo)
+comment2.text=\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MEMBER\ METHODS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\r\n
+comment3.params=X\ output
+comment3.target=void\ doPrintGenes(Chromo,\ java.io.FileWriter)
+numComments=4
