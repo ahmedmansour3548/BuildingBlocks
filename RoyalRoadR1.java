@@ -14,24 +14,24 @@ public class RoyalRoadR1 extends FitnessFunction{
 
 //  COMPUTE A CHROMOSOME'S RAW FITNESS *************************************
 
-    public void doRawFitness(Chromo X){
-    X.rawFitness = 0;
-    int completeSegments = 0;
-    for (int i = 0; i < Parameters.numGenes; i++){
-        boolean segmentComplete = true;
-        for (int j = 0; j < Parameters.geneSize; j++){
-            int index = i * Parameters.geneSize + j;
-            if (X.chromo.charAt(index) != '1'){
-                segmentComplete = false;
-                break;
+        public void doRawFitness(Chromo X){
+        X.rawFitness = 0;
+        int completeSegments = 0;
+        for (int i = 0; i < Parameters.numGenes; i++){
+            boolean segmentComplete = true;
+            for (int j = 0; j < Parameters.geneSize; j++){
+                int index = i * Parameters.geneSize + j;
+                if (X.chromo.charAt(index) != '1'){
+                    segmentComplete = false;
+                    break;
+                }
+            }
+            if (segmentComplete){
+                completeSegments++;
             }
         }
-        if (segmentComplete){
-            completeSegments++;
-        }
+        X.rawFitness = 1 * completeSegments;
     }
-    X.rawFitness = 100 * completeSegments;
-}
 
 
 //  PRINT OUT AN INDIVIDUAL GENE TO THE SUMMARY FILE *********************************
