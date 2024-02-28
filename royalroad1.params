@@ -1,18 +1,19 @@
-Experiment ID                :numbermatch
+Experiment ID                :royalroad1
 Problem Type                 :RR1
 Data Input File Name         :NA
-Number of Runs               :3
+Number of Runs               :200
 Generations per Run          :100
 Population Size              :100
 Selection Method (1)         :1
-Fitness Scaling Type (2)     :1
-Crossover Type (3)           :1
-Crossover Rate (4)           :1.0
+Fitness Scaling Type (2)     :0
+Crossover Type (3)           :4
+Crossover Rate (4)           :0.6
+Crossover Points (9)         :4
 Mutation Type (5)            :1
 Mutation Rate (6)            :.01
 Random Number Seed           :75982
-Number of Genes/Points (7)   :8
-Size of Genes (18)           :3
+Number of Genes/Points (7)   :20
+Size of Genes (18)           :10
 
 Notes:
 
@@ -28,6 +29,7 @@ Notes:
 3)  Crossover Type Codes    1 = Single Point Crossover
 							2 = Two Point Crossover
 							3 = Uniform Crossover
+							4 = N-Point Crossover (Set Crossover Points)
 
 4)  Crossover Rates from 0 to 1, Use "0" to turn off crossover
 
@@ -39,3 +41,5 @@ Notes:
 
 8)	Determines number of bits in each gene.  Number of Genes times Size
 	gives the number of bits in each chromosome.
+	
+9) Determines the number of points used in n-point crossover. Crossover Type 4 must be selected.

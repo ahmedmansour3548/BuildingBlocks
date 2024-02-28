@@ -78,10 +78,10 @@ public class Search {
         Parameters parmValues = new Parameters(args[0]);
 
     //  Write Parameters To Summary Output File
-        String summaryFileName = Parameters.expID + "_summary.txt";
+        String summaryFileName = Parameters.expID + "_summary.csv";
         FileWriter summaryOutput = new FileWriter(summaryFileName);
-        parmValues.outputParameters(summaryOutput);
-
+        //parmValues.outputParameters(summaryOutput);
+        //summaryOutput.write("Run,Generation,Best Raw Fitness,Average Raw Fitness,Std Dev of Raw Fitness\n");
     //    Set up Fitness Statistics matrix
         fitnessStats = new double[2][Parameters.generations];
         for (int i=0; i<Parameters.generations; i++){
@@ -99,7 +99,7 @@ public class Search {
         else if (Parameters.problemType.equals("OM")){
                 problem = new OneMax();
         }
-        if (Parameters.problemType.equals("RR1")){
+        else if (Parameters.problemType.equals("RR1")){
                 problem = new RoyalRoadR1();
         }
         else if (Parameters.problemType.equals("RR2")){
@@ -216,14 +216,7 @@ public class Search {
                 System.out.println(R + "\t" + G +  "\t" + (int)bestOfGenChromo.rawFitness + "\t" + averageRawFitness + "\t" + stdevRawFitness);
 
                 // Output generation statistics to summary file
-                summaryOutput.write(" R ");
-                Hwrite.right(R, 3, summaryOutput);
-                summaryOutput.write(" G ");
-                Hwrite.right(G, 3, summaryOutput);
-                Hwrite.right((int)bestOfGenChromo.rawFitness, 7, summaryOutput);
-                Hwrite.right(averageRawFitness, 11, 3, summaryOutput);
-                Hwrite.right(stdevRawFitness, 11, 3, summaryOutput);
-                summaryOutput.write("\n");
+                //summaryOutput.write(R + "," + G + "," + (int)bestOfGenChromo.rawFitness + "," + averageRawFitness + "," + stdevRawFitness + "\n");
 
 
         // *********************************************************************
@@ -356,26 +349,23 @@ public class Search {
 
             } //  Repeat the above loop for each generation
 
-            Hwrite.left(bestOfRunR, 4, summaryOutput);
-            Hwrite.right(bestOfRunG, 4, summaryOutput);
+            //Hwrite.left(bestOfRunR, 4, summaryOutput);
+            //Hwrite.right(bestOfRunG, 4, summaryOutput);
 
-            problem.doPrintGenes(bestOfRunChromo, summaryOutput);
+            //problem.doPrintGenes(bestOfRunChromo, summaryOutput);
 
             System.out.println(R + "\t" + "B" + "\t"+ (int)bestOfRunChromo.rawFitness);
 
         } //End of a Run
 
-        Hwrite.left("B", 8, summaryOutput);
+        //Hwrite.left("B", 8, summaryOutput);
 
-        problem.doPrintGenes(bestOverAllChromo, summaryOutput);
+        //problem.doPrintGenes(bestOverAllChromo, summaryOutput);
 
         //    Output Fitness Statistics matrix
-        summaryOutput.write("Gen                 AvgFit              BestFit \n");
+        summaryOutput.write("Gen,AvgFit,BestFit \n");
         for (int i=0; i<Parameters.generations; i++){
-            Hwrite.left(i, 15, summaryOutput);
-            Hwrite.left(fitnessStats[0][i]/Parameters.numRuns, 20, 2, summaryOutput);
-            Hwrite.left(fitnessStats[1][i]/Parameters.numRuns, 20, 2, summaryOutput);
-            summaryOutput.write("\n");
+            summaryOutput.write(i + "," + fitnessStats[0][i]/Parameters.numRuns + "," + fitnessStats[1][i]/Parameters.numRuns + "\n");
         }
 
         summaryOutput.write("\n");
